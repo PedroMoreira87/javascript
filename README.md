@@ -1,2 +1,2 @@
 # javascript
-Getting Started with JavaScript.
+Getting Started with JavaScript and React.
