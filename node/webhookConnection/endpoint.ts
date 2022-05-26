@@ -27,7 +27,7 @@ const data = [];
 // creation of a route that will be accessed using the method HTTP GET/
 // http://localhost:9000/
 app.get('/', (req, res) => {
-    return res.json({ data });
+    return res.json({data});
 });
 
 // creation of a route that will be accessed using the method HTTP POST/
@@ -48,4 +48,4 @@ app.post('/', (req, res) => {
 
 app.listen(80, () => console.log('Express started at http://localhost:80'));
 // node .\node\webhookConnection\endpoint.ts
-// using localtunnel to run a localhost to be detected by the webhook > lt --port 80
+// using localtunnel to run a localhost to be detected by the webhook > lt --subdomain test --port 80
