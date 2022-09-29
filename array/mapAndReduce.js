@@ -12,7 +12,9 @@ const hospitalQueues = [
 function getSum(data) {
   // const queues = data => Object.values(data)[1];
   // const getQueuesValues = data.map(queues);
-  const getQueuesValues = data.map(data => Object.values(data)[1]);
+
+  const getQueuesValues = data.map(data => data.queue);
+  // const getQueuesValues = data.map(data => Object.values(data)[1]); << doing it with object.values
 
   const sum = getQueuesValues.reduce((accumulator, value) => {
     return accumulator + value;
@@ -36,6 +38,6 @@ function getLength(data) {
   console.log(length)
 }
 
+getSum(hospitalQueues);
 getMax(hospitalQueues);
 getLength(hospitalQueues);
-getSum(hospitalQueues);
