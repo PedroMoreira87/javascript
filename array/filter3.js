@@ -1,4 +1,3 @@
-// Remove additional elements with the same id
 let arr = [
     {id: 1, name: "John"},
     {id: 2, name: "Jane"},
@@ -27,5 +26,9 @@ console.log(uniqueArr);
 // Using filter
 let uniqueArr2 = arr.filter((item, index, self) =>
     self.findIndex(t => t.id === item.id) === index);
-
 console.log(uniqueArr2);
+
+// Return a boolean
+let hasDuplicate = arr.filter((item, index, self) =>
+    self.findIndex(t => t.id === item.id) !== index).length !== 0;
+console.log(hasDuplicate);
